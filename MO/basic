@@ -1,0 +1,20 @@
+// node js 설치
+
+// npm i -g typescript  타입스크립트 설치
+
+// tsc -w :타입스크립트 자동 변환 => 컴파일
+
+// 변수에 타입지정
+// let 이름 : string =""; // 이름이라는변수는 문자열만 가능하도록 지정하는것
+
+// 종류
+// array = [] //배열을 지정하는데 string[]처럼 어떤 배열인지 지정 =>
+// object ={ name : string } ={} 오브젝트
+
+// let 이름 :string | number = 123; //문자 또는 넘버
+
+// type Name = string | number ; //타입지정 : 타입지정은 앞에 대문자로
+
+// funtion 함수 (x:number) :number {   //x는 넘버, ():number 리턴도 넘버
+//   return x* 2;
+// }
