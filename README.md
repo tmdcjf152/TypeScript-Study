@@ -1,5 +1,6 @@
 # 타입스크립트
 
+
 ## 설치방법
 ```
 npm install -g typescript
@@ -15,3 +16,9 @@ npm install -g typescript
 
 ## 실행방법
 터미널에 tsc -w를 입력하면 자동으로 ts파일을 js파일로 변환해준다.
+
+--- 
+## 커밋 컨벤션
+🌈Add : 
+🛠Fix : 
+🧹Del : 
