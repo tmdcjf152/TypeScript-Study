@@ -56,10 +56,27 @@ if (링크 instanceof HTMLAnchorElement) {
 var 버튼 = document.querySelector("#button");
 // 버튼?.addEventListener('click', function)
 //class 키워드 이해하기
+//옛날 문법
 function 기계(구멍, 구멍2) {
     this.q = 구멍;
     this.w = 구멍2;
 }
 //this => 기계로부터 생성되는 object = instance
+//기계 => 부모 , nunu garen => 자식
 var nunu = new 기계("consume", "snowball");
 var garen = new 기계("strike", "consume");
+var Hero = /** @class */ (function () {
+    function Hero(구멍, 구멍2) {
+        this.q = 구멍;
+        this.w = 구멍2;
+    }
+    return Hero;
+}());
+//prototype
+//기계의 유전자
+기계.prototype.name = "kim";
+//nunu.name = 'kim'
+//nunu자체에는 없지만 부모에게 있는 유전자 를 끌어다 쓸 수 있음
+//prototype chain
+var 어레이 = [4, 2, 1];
+어레이.sort();
