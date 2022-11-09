@@ -3,7 +3,7 @@ let person: "kim";
 
 //아래와 같이 제한 가능
 function 함수(a: "hello"): 0 | 1 {
-  return 2;
+  return 0;
 }
 
 //가위바위보중 1개 입력 가능
@@ -22,7 +22,7 @@ var 자료 = {
 } as const;
 
 function 내함수(a: "kim") {}
-내함수("자료.name");
+내함수(자료.name);
 
 //type alias에 함수 타입 저장하는 법 (화살표 함수로 사용)
 //이걸 사용하려면 함수 표현식 써야함.
@@ -39,7 +39,7 @@ let 회원정보 = {
   },
   changeName: () => {},
 };
-회원정보.plusOne();
+회원정보.plusOne(3);
 
 //typescript로 HTML 조작 가능 ->narrowing
 let 제목 = document.querySelector("#title");
@@ -68,19 +68,3 @@ if (링크 instanceof HTMLAnchorElement) {
 
 let 버튼 = document.querySelector("#button");
 버튼?.addEventListener("click", function () {});
-
-//this는 기계로 부터 생성되는 object들
-function 기계(구멍1, 구멍2) {
-  this.q = 구멍1;
-  this.w = 구멍2;
-}
-
-let nunu = new 기계("consume", "nana");
-let garen = new 기계("strike", "mimi");
-
-class Hero {
-  constructor(구멍) {
-    this.q = 구멍;
-    this.w = "snowball";
-  }
-}

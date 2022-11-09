@@ -2,7 +2,7 @@
 var person;
 //아래와 같이 제한 가능
 function 함수(a) {
-    return 2;
+    return 0;
 }
 //가위바위보중 1개 입력 가능
 // 가위나 보나 바위 만 들어올 수 있는 어레이만 리턴
@@ -17,7 +17,7 @@ var 자료 = {
     name: "kim",
 };
 function 내함수(a) { }
-내함수("자료.name");
+내함수(자료.name);
 var example = function () {
     return 10;
 };
@@ -29,7 +29,7 @@ var 회원정보 = {
     },
     changeName: function () { },
 };
-회원정보.plusOne();
+회원정보.plusOne(3);
 //typescript로 HTML 조작 가능 ->narrowing
 var 제목 = document.querySelector("#title");
 if (제목 != null) {
@@ -54,17 +54,3 @@ if (링크 instanceof HTMLAnchorElement) {
 }
 var 버튼 = document.querySelector("#button");
 버튼 === null || 버튼 === void 0 ? void 0 : 버튼.addEventListener("click", function () { });
-//this는 기계로 부터 생성되는 object들
-function 기계(구멍1, 구멍2) {
-    this.q = 구멍1;
-    this.w = 구멍2;
-}
-var nunu = new 기계("consume", "nana");
-var garen = new 기계("strike", "mimi");
-var Hero = /** @class */ (function () {
-    function Hero(구멍) {
-        this.q = 구멍;
-        this.w = "snowball";
-    }
-    return Hero;
-}());

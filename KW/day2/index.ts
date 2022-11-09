@@ -1,10 +1,10 @@
 //함수에서만 사용하는 void 타입 - 텅 비었다. / return 하기 싫은 함수에 사용
 //자바스크립트와 다른 점 : 타입지정된 파라미터는 필수임
 //파라미터가 옵션일 경우엔 파라미터?:타입(x?:number) -> ?는 number|undefined 와 동일
-function 함수(x: number | string): void {
-  console.log(x + 3);
+function 함수1(x: number | string): void {
+  console.log();
 }
-함수(2);
+함수1(2);
 
 function 함수2(x: string): void {
   if (x) {
