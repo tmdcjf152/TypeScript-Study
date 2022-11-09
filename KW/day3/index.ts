@@ -10,7 +10,7 @@ function 함수(a: "hello"): 0 | 1 {
 // 가위나 보나 바위 만 들어올 수 있는 어레이만 리턴
 
 function quiz(a: "가위" | "바위" | "보"): ("가위" | "바위" | "보")[] {
-  return ["가위"];
+  return ["가위", "바위"];
 }
 
 //kim 이라는 타입만 들어올 수 있다는 뜻이기 때문에 아래에 자료.name이 못들어감.
@@ -68,3 +68,40 @@ if (링크 instanceof HTMLAnchorElement) {
 
 let 버튼 = document.querySelector("#button");
 버튼?.addEventListener("click", function () {});
+
+//문제 1
+type peopleType = {
+  name: string;
+  age: number;
+  plusOne: (x: number) => number;
+  changeName: () => void;
+};
+let 회원정보2: peopleType = {
+  name: "kim",
+  age: 30,
+  plusOne(x) {
+    return x + 1;
+  },
+  changeName: () => {
+    console.log("안녕");
+  },
+};
+회원정보2.plusOne(1);
+회원정보2.changeName();
+
+//문제2
+function cutZero(x) {
+  if (x.length === 1) {
+    return "0";
+  } else {
+    return String(x.substr(x[0], x.length));
+  }
+}
+
+function removeDash(x) {}
+
+type CutType = (x: string) => string;
+
+let cutZero2: CutType = function (x) {
+  let result = x.replace(/^0+/, "");
+};
