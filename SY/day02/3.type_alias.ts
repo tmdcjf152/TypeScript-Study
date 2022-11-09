@@ -15,9 +15,9 @@ type Girl = {
   readonly name: string;
 };
 
-type Girl = {
+type Girlfriend = {
   name?: string;
-  name: string | undefined;
+  //name: string | undefined; 와 같음
 };
 
 const 여친 = {

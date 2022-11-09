@@ -1,5 +1,5 @@
 //함수에 타입 지정
-function 함수(x: number): number {
+function 타입함수(x: number): number {
   return x * 2;
 }
 
@@ -12,23 +12,22 @@ function sdf(x): void {}
 function sadf(x?: number) {}
 
 //narrowing
-function fdasd(x: number | string) {
+/*function fdasd(x: number | string) {
   if (x가 숫자면) {
     
     return(x+3)
   }
-}
+}*/
 
-function 내함수(x: number | string) {
-  let array: number[] = []
-  if (typeof x === 'number') {
+function my함수(x: number | string) {
+  let array: number[] = [];
+  if (typeof x === "number") {
     array[0] = x;
   }
-//array[0] = x as number => assertion
+  //array[0] = x as number => assertion
 }
 //Narrowing 판정 문법들 typeof, in, instance
 /* assertion 문법 = 타입 덮어 쓰기 
 용도 narrowing 할때 그냥 타입 변경은 안됨
 무슨 타입이 들어올지 100% 확신할 때 
 되도록 if문 쓰는게 좋음 버그 못 잡아줘서 */
-
